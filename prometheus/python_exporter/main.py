@@ -9,16 +9,16 @@ h = Histogram('my_histogram', 'Description of histogram', ["super_label", "hyper
 def process_request():
     time.sleep(random.random())
     if random.randint(0,1) == 0:
-        c.labels("one","mine").inc()
-        c.labels("two","mine").inc(2)
-        g.labels("set","mine").set(42)
+        c.labels("one","test").inc()
+        c.labels("two","test").inc(2)
+        g.labels("set","test").set(42)
     else:
-        g.labels("set","mine").dec(10)
+        g.labels("set","test").dec(10)
 
     for i in range(0,10):
-        h.labels("demo", "mine").observe(random.random()*10)    
-        h.labels("demo2", "mine").observe(random.random()*10)   
-        h.labels("demo3", "mine").observe(random.random()*10)
+        h.labels("demo", "test").observe(random.random()*10)    
+        h.labels("demo2", "test").observe(random.random()*10)   
+        h.labels("demo3", "test").observe(random.random()*10)
 
 if __name__ == '__main__':
     # Start up the server to expose the metrics.

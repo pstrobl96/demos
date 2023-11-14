@@ -1,0 +1,9 @@
+FROM python:3.9
+
+RUN pip install prometheus-client
+
+ADD . .
+
+CMD python ./main.py     
+
+EXPOSE 8000
