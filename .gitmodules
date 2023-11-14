@@ -1,0 +1,3 @@
+[submodule "prometheus/php_exporter/prometheus_client_php"]
+	path = prometheus/php_exporter/prometheus_client_php
+	url = https://github.com/PromPHP/prometheus_client_php.git
